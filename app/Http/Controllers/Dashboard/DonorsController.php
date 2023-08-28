@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\PublicInfo;
+use App\Reward;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -40,6 +41,37 @@ class DonorsController extends Controller
         }
         return view('dashboard.donors.index', compact('donors'));
     }
+    public function dekbe()
+    {
+
+        $donors = array();
+
+        foreach (PublicInfo::all() as $public_info) {
+
+            $user = User::find($public_info->user_id);
+
+            if ($user) {
+
+                array_push($donors, array(
+                    'publicinfo_id' => $public_info->id,
+                    'user_id' => $user->id,
+                    'email' => $user->email,
+                    'image' => $public_info->image,
+                    'name' => $public_info->name,
+                    'contact' => $public_info->contact,
+                    'age' => $public_info->age,
+                    'blood_group' => $public_info->blood_group,
+                    'gender' => $public_info->gender,
+                    'address' => $public_info->address,
+                ));
+            } else {
+                //user dsnt exists
+                //delete
+                $public_info->delete();
+            }
+        }
+        return view('site.donors', compact('donors'));
+    }
 
     public function removeDonor($user_id)
     {
@@ -57,6 +89,21 @@ class DonorsController extends Controller
                 $user->delete();
             }
         }
+
+        return back();
+    }
+
+    public function removeReward()
+    {
+
+        
+
+            $public_info =  Reward::first();
+
+            if ($public_info) {
+                $public_info->delete();
+            }
+        
 
         return back();
     }

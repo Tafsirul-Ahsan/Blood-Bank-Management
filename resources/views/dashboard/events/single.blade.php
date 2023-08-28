@@ -5,7 +5,7 @@
 <nav aria-label="breadcrumb ">
     <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item "><a href="/" class="text-dark">Home</a></li>
-        <li class="breadcrumb-item"><a href="/events" class="text-dark">Events</a></li>
+        <li class="breadcrumb-item"><a href="/events" class="text-dark">Resource</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{$event->title}}</li>
     </ol>
 </nav>

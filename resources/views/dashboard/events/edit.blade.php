@@ -5,7 +5,7 @@
 <nav aria-label="breadcrumb ">
     <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item "><a href="/dashboard" class="text-dark">Home</a></li>
-        <li class="breadcrumb-item "><a href="/events" class="text-dark">Events</a></li>
+        <li class="breadcrumb-item "><a href="/events" class="text-dark">Resource</a></li>
         <li class="breadcrumb-item active" aria-current="page">Edit</li>
     </ol>
 </nav>
@@ -15,7 +15,7 @@
     <div class="col-12 col-md-6">
         <div class="card mt-3 mb-5">
             <div class="card-body">
-                <h5 class="card-title text-center">Edit Event Form</h5>
+                <h5 class="card-title text-center">Edit Resource Form</h5>
 
             <form accept="/events/{{$event->id}}/edit" method="POST">
                     {{ csrf_field() }}
@@ -41,7 +41,7 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary btn-raised mt-4">Update Event</button>
+                    <button type="submit" class="btn btn-primary btn-raised mt-4">Update Resource</button>
                 </form>
             </div>
         </div>

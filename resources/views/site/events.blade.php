@@ -13,7 +13,7 @@
     <div class=" ">
 
         <div class="h2 title text-center pt-3 pb-3">
-            <span>Events</span>
+            <span>Resource Share Admin</span>
         </div>
         <div class="row">
             @if (!empty($events))

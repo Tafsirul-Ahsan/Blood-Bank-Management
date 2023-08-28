@@ -6,8 +6,8 @@
 <nav aria-label="breadcrumb ">
     <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item "><a href="/dashboard" class="text-dark">Home</a></li>
-        <li class="breadcrumb-item "><a href="/events" class="text-dark">Events</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Add</li>
+        <li class="breadcrumb-item "><a href="/events" class="text-dark">Resource</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sharing</li>
     </ol>
 </nav>
 
@@ -16,7 +16,7 @@
     <div class="col-12 col-md-6">
         <div class="card mt-3 mb-5">
             <div class="card-body">
-                <h5 class="card-title text-center">Add New Event Form</h5>
+                <h5 class="card-title text-center">Add New Resource Form</h5>
 
                 <form action="/events/add" method="POST">
                     {{ csrf_field() }}
@@ -42,7 +42,7 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary btn-raised mt-4">Add Event</button>
+                    <button type="submit" class="btn btn-primary btn-raised mt-4">Add Resource Share</button>
                 </form>
             </div>
         </div>

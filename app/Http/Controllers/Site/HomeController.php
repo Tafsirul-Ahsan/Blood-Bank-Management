@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\BloodBankSearch;
 use App\Bloodrequests;
 use App\DonationRecord;
 use App\Events;
@@ -236,5 +237,23 @@ class HomeController extends Controller
             }
         }
         return $quantity;
+    }
+
+    public function search(Request $request)
+    {
+    
+        $q = $request->search;
+        $searchpro = PublicInfo::where("name", 'like', "%$q%")->get();
+
+        return view('site.search', compact('searchpro', 'q'));
+    }
+
+    public function bank_search(Request $request)
+    {
+    
+        $q = $request->search;
+        $searchpro = BloodBankSearch::where("address", 'like', "%$q%")->get();
+
+        return view('site.bloodbank', compact('searchpro', 'q'));
     }
 }

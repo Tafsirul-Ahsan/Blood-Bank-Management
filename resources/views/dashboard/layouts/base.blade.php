@@ -29,12 +29,14 @@
             </header>
             <ul class="list-group">
                 <a href="/dashboard" class="list-group-item text-white">Dashboard</a>
-                <a href="/events" class="list-group-item text-white">Events</a>
+                <a href="/events" class="list-group-item text-white">Resource Shareing</a>
                 <a href="/blood-requests" class="list-group-item text-white">Blood Requests</a>
                 <a href="/recipients" class="list-group-item text-white">Recipients</a>
+                <a href="/rewards" class="list-group-item text-white">Rewards Share</a>
                 <a href="/users" class="list-group-item text-white">Users</a>
                 <a href="/donors" class="list-group-item text-white">Donors</a>
                 <a href="/profile" class="list-group-item text-white">Profile</a>
+                <a href="/notify" class="list-group-item text-white">Notify</a>
                 <a href="/logout" class="list-group-item text-white">Logout</a>
             </ul>
         </div>

@@ -3,7 +3,7 @@
 @section('css')
     <style>
         body {
-            background: #7F00FF;
+            background: cornsilk;
             /* fallback for old browsers */
             font-family: "Raleway", sans-serif;
             color: #151515;

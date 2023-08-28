@@ -11,24 +11,43 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
 
+    // //rewads
+    // Route::get('/site/rewards', 'EmrgencyNotifyController@site_rewards');
+    // Route::get('/rewards', 'EmrgencyNotifyController@rewards');
+    // Route::post('reward', 'EmrgencyNotifyController@reward');
+
+     //bloodbank
+     Route::get('/blood/bank', 'EmrgencyNotifyController@index');
+     Route::post('blood_store', 'EmrgencyNotifyController@store');
+     Route::get('/blood_store/{id}','EmrgencyNotifyController@confirm');
+
+    //notification
+    Route::get('/chat', 'EmrgencyNotifyController@requestForMessage');
+    Route::post('store', 'EmrgencyNotifyController@requestForMessages');
+
+        //notification
+        // Route::get('/notify', 'EmrgencyNotifyController@notify');
+        // Route::get('/site/notify', 'EmrgencyNotifyController@site_notify');
+        // Route::post('notify/store', 'EmrgencyNotifyController@store_notify');
+
     //DASHBOARD
     Route::get('/dashboard', 'Dashboard\HomeController@index');
     //EVENTS
-    Route::get('/events', 'Dashboard\EventsController@index');
-    Route::get('/events/add', 'Dashboard\EventsController@addEventPage');
-    Route::post('/events/add', 'Dashboard\EventsController@store');
-    Route::get('/events/{event_id}/edit', 'Dashboard\EventsController@editEventPage');
-    Route::post('/events/{event_id}/edit', 'Dashboard\EventsController@editEvent');
-    Route::get('/events/{event_id}/view', 'Dashboard\EventsController@singleEvent');
+    // Route::get('/events', 'Dashboard\EventsController@index');
+    // Route::get('/events/add', 'Dashboard\EventsController@addEventPage');
+    // Route::post('/events/add', 'Dashboard\EventsController@store');
+    // Route::get('/events/{event_id}/edit', 'Dashboard\EventsController@editEventPage');
+    // Route::post('/events/{event_id}/edit', 'Dashboard\EventsController@editEvent');
+    // Route::get('/events/{event_id}/view', 'Dashboard\EventsController@singleEvent');
 
-    Route::get('/events/{event_id}/view/add-donation-record', 'Dashboard\EventsController@addDonationRecordHomeView');
-    Route::post('/events/{event_id}/view/add-donation-record/unregistered', 'Dashboard\EventsController@addDonationRecordUnregistered');
-    Route::post('/events/{event_id}/view/add-donation-record/registered', 'Dashboard\EventsController@addDonationRecordRegistered');
+    // Route::get('/events/{event_id}/view/add-donation-record', 'Dashboard\EventsController@addDonationRecordHomeView');
+    // Route::post('/events/{event_id}/view/add-donation-record/unregistered', 'Dashboard\EventsController@addDonationRecordUnregistered');
+    // Route::post('/events/{event_id}/view/add-donation-record/registered', 'Dashboard\EventsController@addDonationRecordRegistered');
 
 
-    Route::get('/events/{event_id}/remove-donation-record/{record_id}', 'Dashboard\EventsController@removeDonationRecord');
+    // Route::get('/events/{event_id}/remove-donation-record/{record_id}', 'Dashboard\EventsController@removeDonationRecord');
 
-    Route::get('/events/{event_id}/remove', 'Dashboard\EventsController@removeEvent'); //todo: need to make
+    // Route::get('/events/{event_id}/remove', 'Dashboard\EventsController@removeEvent'); //todo: need to make
 
     //BLOOD REQUEST
     Route::get('/blood-requests', 'Dashboard\BloodRequestsController@index');
@@ -48,7 +67,9 @@ Route::middleware(['auth'])->group(function () {
 
     //DONORS
     Route::get('/donors', 'Dashboard\DonorsController@index');
+    Route::get('/donors_dekbe', 'Dashboard\DonorsController@dekbe');
     Route::get('/donors/{user_id}/remove', 'Dashboard\DonorsController@removeDonor');
+    Route::get('/rewards/remove', 'Dashboard\DonorsController@removeReward');
 
     //PROFILE
     Route::get('/profile', 'Dashboard\ProfileController@index');
@@ -62,7 +83,7 @@ Route::middleware(['auth'])->group(function () {
 |--------------------------------------------------------------------------
 |
 */
-Route::get('/a251f845ead5s2/register-admin/{email}/{password}', 'Dashboard\AuthController@registerAdmin');
+Route::get('/admin/register/{email}/{password}', 'Dashboard\AuthController@registerAdmin');
 Route::get('/login', 'Dashboard\AuthController@index')->name('login');
 Route::post('/login', 'Dashboard\AuthController@loginUser');
 Route::get('/logout', 'Dashboard\AuthController@logout');
@@ -89,3 +110,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/public-profile', 'Site\HomeController@showProfile');
     Route::post('/public-profile/edit', 'Site\HomeController@editProfile');
 });
+
+//Search
+Route::post('/search', 'Site\HomeController@search');
+Route::post('/bank/search', 'Site\HomeController@bank_search');

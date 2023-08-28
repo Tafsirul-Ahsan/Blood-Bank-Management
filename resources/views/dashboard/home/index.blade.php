@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body text-center p-3">
                     <h5 class="card-title">
-                        Events Organized
+                    Resource Share
                     </h5>
                     <div class="text-center h1 font-weight-bold">
                         {{$total_events}}

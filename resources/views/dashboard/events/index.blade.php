@@ -5,14 +5,14 @@
 <nav aria-label="breadcrumb ">
     <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item "><a href="/" class="text-dark">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Events</li>
+        <li class="breadcrumb-item active" aria-current="page">Resource</li>
     </ol>
 </nav>
 
 
 @if (Auth::user()->type == 'admin')
 
-<a href="/events/add" class="btn btn-dark active">Add Event</a>
+<a href="/events/add" class="btn btn-dark active">Add Resource</a>
 @endif
 
 

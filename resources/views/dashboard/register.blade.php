@@ -3,7 +3,7 @@
 @section('css')
 <style>
     body {
-        background: #7F00FF;
+        background: cornsilk;
         /* fallback for old browsers */
         font-family: "Raleway", sans-serif;
         color: #151515;
@@ -221,47 +221,18 @@
                         </label>
                     </div>
                 </div>
-                {{-- <div class="form-field">
-                    <label for="blood_group">Blood Group</label>
-                    <div>
-                        <label class="radio-inline pt-3">
-                            <input type="radio" name="blood_group" id="inlineRadio1" value="A+" checked> A+
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio1" value="A-" checked> A-
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="B+"> B+
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="B-"> B-
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="AB+"> AB+
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="AB-"> AB-
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="O+"> O+
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="blood_group" id="inlineRadio2" value="O-"> O-
-                        </label>
-                    </div>
-                </div> --}}
 
                 <div class="form-field pt-2">
                     <label for="blood_group">Blood Group</label>
                     <select name="blood_group" class="form-control" id="blood_group">
-                        <option value="A+" checked> A+</option>
-                        <option value="A-"> A-</option>
-                        <option value="B+"> B+</option>
-                        <option value="B-"> B-</option>
-                        <option value="AB+"> AB+</option>
-                        <option value="AB-"> AB-</option>
-                        <option value="O+"> O+</option>
-                        <option value="O-"> O-</option>
+                        <option name="blood_group" value="A+" checked> A+</option>
+                        <option name="blood_group" value="A-"> A-</option>
+                        <option name="blood_group" value="B+"> B+</option>
+                        <option name="blood_group" value="B-"> B-</option>
+                        <option name="blood_group" value="AB+"> AB+</option>
+                        <option name="blood_group" value="AB-"> AB-</option>
+                        <option name="blood_group" value="O+"> O+</option>
+                        <option name="blood_group" value="O-"> O-</option>
                     </select>
                 </div>
                 <div class="form-field">
